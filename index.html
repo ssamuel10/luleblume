@@ -2,17 +2,94 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lule Blume</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <h1>Lule Blume</h1>
-  <p>Florería boutique en Guadalajara</p>
+  <header class="hero">
 
-  <a href="https://wa.me/521XXXXXXXXXX">
-    Pedir por WhatsApp
-  </a>
+    <nav class="navbar">
+      <h1 class="logo">Lule Blume</h1>
+
+      <div class="nav-links">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h2>Florería Boutique en Guadalajara</h2>
+
+      <p>
+        Arreglos florales elegantes para momentos especiales.
+      </p>
+
+      <a class="btn" href="https://wa.me/521XXXXXXXXXX">
+        Pedir por WhatsApp
+      </a>
+    </div>
+
+  </header>
+
+  <section id="catalogo" class="section">
+
+    <h2>Nuestros Arreglos</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="images/ramo1.jpg" alt="">
+        <h3>Ramos Elegantes</h3>
+      </div>
+
+      <div class="card">
+        <img src="images/ramo2.jpg" alt="">
+        <h3>Bouquets Premium</h3>
+      </div>
+
+      <div class="card">
+        <img src="images/ramo3.jpg" alt="">
+        <h3>Detalles Especiales</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="nosotros" class="section about">
+
+    <h2>Sobre Nosotros</h2>
+
+    <p>
+      En Lule Blume creamos arreglos florales con una estética elegante,
+      moderna y personalizada para cada ocasión.
+    </p>
+
+  </section>
+
+  <section id="contacto" class="section contact">
+
+    <h2>Contacto</h2>
+
+    <p>Guadalajara, Jalisco</p>
+
+    <a class="btn" href="https://instagram.com/">
+      Instagram
+    </a>
+
+  </section>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
