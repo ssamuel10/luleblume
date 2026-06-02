@@ -4,6 +4,7 @@
    ═══════════════════════════════════════════ */
 
 /* ── Variables ─────────────────────────────── */
+
 :root {
   --peach:        #f4c4a1;
   --peach-deep:   #e8966a;
@@ -22,6 +23,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 /* ── Base ───────────────────────────────────── */
@@ -46,17 +57,19 @@ img {
 ══════════════════════════════════════════════ */
 
 .hero {
+  display: block;
   background: var(--peach-light);
   padding: 0 60px 60px;
+  overflow: hidden;
 }
 
 /* ── Navbar ─────────────────────────────────── */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 36px 0 0;
-  margin-bottom: 40px;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 20px;
 }
 
 .logo-block {
@@ -298,6 +311,7 @@ img {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 16px;
+  align-items: stretch;
 }
 
 .card {
@@ -314,16 +328,13 @@ img {
 
 .card-img {
   position: relative;
-  aspect-ratio: 3 / 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 480px;   /* ← igualas al alto de la card grande */
   overflow: hidden;
 }
 
 /* Card grande toma toda la altura */
 .card-large .card-img {
-  aspect-ratio: 2 / 3;
+  height: 480px;
 }
 
 .card-deco {
@@ -513,7 +524,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 60px;
+  padding: 10px 60px;
   border-top: 0.5px solid var(--beige-dark);
   background: var(--beige);
 }
@@ -548,6 +559,20 @@ img {
   font-size: 11px;
   color: var(--ink-light);
   letter-spacing: 0.08em;
+}
+
+
+/* Logos */
+.logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 
