@@ -101,7 +101,7 @@ img {
 }
 
 .nav-links a {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--ink-mid);
@@ -130,8 +130,8 @@ img {
 }
 
 .hero-label {
-  font-size: 9px;
-  letter-spacing: 0.4em;
+  font-size: 12px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--peach-deep);
   border-left: 2px solid var(--peach-deep);
@@ -279,7 +279,7 @@ img {
 }
 
 .section-label span {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--ink-light);
@@ -294,7 +294,7 @@ img {
 }
 
 .section-pre {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--peach-deep);
@@ -379,6 +379,106 @@ img {
   color: var(--peach-deep);
 }
 
+/* ══════════════════════════════════════════════
+   GALERÍA
+══════════════════════════════════════════════ */
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.galeria-item {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.galeria-item:hover {
+  transform: scale(1.03);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive galería */
+@media (max-width: 900px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   OCASIONES
+══════════════════════════════════════════════ */
+
+.ocasiones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.ocasion-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 28px 24px;
+  border: 0.5px solid var(--beige-dark);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+
+.ocasion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(42, 31, 26, 0.08);
+}
+
+.ocasion-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.ocasion-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.ocasion-desc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-mid);
+}
+
+/* Responsive ocasiones */
+@media (max-width: 900px) {
+  .ocasiones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ocasiones-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
 
 /* ══════════════════════════════════════════════
    NOSOTROS
@@ -542,13 +642,27 @@ img {
   gap: 20px;
 }
 
-.footer-links a {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink-light);
+.footer-links {
+  display: flex;
+  gap: 28px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-mid);
   text-decoration: none;
   transition: color 0.2s;
+}
+
+.social-link span {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.social-link:hover {
+  color: var(--peach-deep);
 }
 
 .footer-links a:hover {
@@ -556,7 +670,7 @@ img {
 }
 
 .footer-loc {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink-light);
   letter-spacing: 0.08em;
 }
@@ -681,4 +795,77 @@ img {
   .footer {
     padding: 20px;
   }
+}
+
+/* ══════════════════════════════════════════════
+   BOTÓN FLOTANTE WHATSAPP
+══════════════════════════════════════════════ */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+/* ══════════════════════════════════════════════
+   ANIMACIONES
+══════════════════════════════════════════════ */
+
+.card,
+.galeria-item,
+.about-text,
+.about-quote-box,
+.location-grid,
+.hero-text,
+.hero-visual {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card:nth-child(2),
+.galeria-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.card:nth-child(3),
+.galeria-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.galeria-item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 }
