@@ -41,3 +41,33 @@ document.querySelectorAll('.carrusel').forEach(carrusel => {
 
   setInterval(() => ir(actual + 1), 3500);
 });
+
+// ── Eventos Meta Pixel ─────────────────────────
+
+// Clic en cualquier botón de WhatsApp
+document.querySelectorAll('a[href*="wa.me"]').forEach(btn => {
+  btn.addEventListener('click', function() {
+    fbq('track', 'Contact');
+  });
+});
+
+// Clic en Instagram
+document.querySelectorAll('a[href*="instagram.com"]').forEach(btn => {
+  btn.addEventListener('click', function() {
+    fbq('track', 'Lead');
+  });
+});
+
+// Ver catálogo
+const catalogoSection = document.querySelector('#catalogo');
+if (catalogoSection) {
+  const catalogoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        fbq('track', 'ViewContent');
+        catalogoObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  catalogoObserver.observe(catalogoSection);
+}
